@@ -17,7 +17,7 @@
 export default {
     name: 'BaseHeader',
     props: {
-      HeaderLinks: HeaderLinks,
+      HeaderLinks: Array,
     }
 }
 </script>

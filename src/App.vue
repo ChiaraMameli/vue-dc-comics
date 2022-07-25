@@ -2,7 +2,7 @@
   <div>
     <BaseHeader :header-links= "HeaderLinks"/>
     <BaseMain />
-    <BonusSection />
+    <BonusSection :bonus-links="BonusLinks" />
     <BaseFooter />
   </div>
 </template>
@@ -74,7 +74,35 @@ data(){
             url: '#',
             current: false,
           },
-             ]
+             ],
+      BonusLinks: [
+        {
+            src: require("./assets/img/buy-comics-digital-comics.png"),
+            ref: '#',
+            text: 'Digital Comics',
+        },
+        {
+            src: require("./assets/img/buy-comics-merchandise.png"),
+            ref: '#',
+            text: 'DC Merchandise',
+        },
+        {
+            src: require("./assets/img/buy-comics-subscriptions.png"),
+            ref: '#',
+            text: 'Subscription',
+        },
+        {
+            src: require("./assets/img/buy-comics-shop-locator.png"),
+            ref: '#',
+            text: 'Comic Shop Locator',
+        },
+        {
+            src: require("./assets/img/buy-dc-power-visa.svg"),
+            ref: '#',
+            text: 'DC Powe Visa',
+        },
+    ]
+
   }
 }
 }
