@@ -36,11 +36,13 @@ export default {
         figure {
         display: flex;
             img{
-            max-width: 2.5rem;
+            width: 2rem;
+            object-fit: contain;
             }
             figcaption{
             align-self: center;
             margin-left: 1rem;
+            text-transform: capitalize;
                 a {
                 color: #FFF;
                 }

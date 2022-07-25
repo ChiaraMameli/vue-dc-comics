@@ -3,48 +3,27 @@
         <div id="footer-top">
             <div class="container">
                 <div class="list-column">
-                    <h4>PLUTO</h4>
+                    <h4>{{DcComics.title}}</h4>
                     <ul>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
+                        <li v-for="link in DcComics.links" :key="link">{{link}}</li>
                     </ul>
                 </div>
                 <div class="list-column">
-                    <h4>PLUTO</h4>
+                    <h4>{{Shop.title}}</h4>
                     <ul>
-                        <li>pippo</li>
-                        <li>pippo</li>
+                        <li v-for="link in Shop.links" :key="link">{{link}}</li>
                     </ul>
                 </div>
                 <div class="list-column">
-                    <h4>PLUTO</h4>
+                    <h4>{{DC.title}}</h4>
                     <ul>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
+                        <li v-for="link in DC.links" :key="link">{{link}}</li>
                     </ul>
                 </div>
                 <div class="list-column">
-                    <h4>PLUTO</h4>
+                    <h4>{{Sites.title}}</h4>
                     <ul>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
-                        <li>pippo</li>
+                        <li v-for="link in Sites.links" :key="link">{{link}}</li>
                     </ul>
                 </div>
                 <div>
@@ -73,16 +52,23 @@
 <script>
 export default {
     name: 'BaseFooter',
-}
+    props:{
+        DcComics: Object,
+        Shop: Object,
+        DC: Object,
+        Sites: Object,
+    }
+    }
+
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/sass/vars';
 /* FOOTER TOP */
     #footer-top {
         background-image: url('../assets/img/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        max-height: 400px;
         padding: 2rem 0;
         text-align: center;
 
@@ -95,8 +81,21 @@ export default {
             .list-column {
             padding-left: 1rem;
 
+                h4{
+                    font-size: 1.2rem;
+                    padding-bottom: 0.4rem;
+                    text-align: start;
+
+                }
+
                 ul {
                 padding: 0;
+                    li{
+                    font-size: 1rem;
+                    font-weight: lighter;
+                    text-align: start;
+                    padding: 0.2rem 0;
+                    }
                 }
             }
         }
@@ -121,7 +120,7 @@ export default {
             
                 #sign-up {
                     padding: 0.5rem;
-                    border: 1px solid #1E82F6;
+                    border: 1px solid $color_blue;
                     cursor: pointer;
                     color: #FFF
                     }
@@ -130,7 +129,7 @@ export default {
             nav {
 
                 #follow-us {
-                color: var(--blue)
+                color: $color_blue
                 }
 
                 li {

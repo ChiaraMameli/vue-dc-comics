@@ -3,7 +3,7 @@
     <BaseHeader :header-links= "HeaderLinks"/>
     <BaseMain :comics="Comics"/>
     <BonusSection :bonus-links="BonusLinks" />
-    <BaseFooter />
+    <BaseFooter :dc-comics="DcComics" :shop="Shop" :d-c="DC" :sites="Sites"/>
   </div>
 </template>
 
@@ -175,8 +175,48 @@ data(){
             "series": "Catwoman",
             "type": "graphic novel"
         }
-            ]
-
+            ],
+      DcComics: {
+        title: 'DC COMICS',
+        links: [
+            'Characters',
+            'Comics',
+            'Movies',
+            'TV',
+            'Games',
+            'Videos',
+            'News'
+        ]},
+      Shop: {
+          title: 'SHOP',
+          links: [
+              'Shop DC',
+              'Shop DC Collectibles',
+          ]},
+      DC: {
+          title: 'DC',
+          links: [
+              'Terms of Use',
+              'Privacy policy (new)',
+              'Ad Choices',
+              'Advertising',
+              'Jobs',
+              'Subscriptions',
+              'Talent Workshops',
+              'CPSC Certificates',
+              'Ratings',
+              'Shop Help',
+              'Contact Us '
+          ]},
+      Sites: {
+          title: 'SITES',
+          links: [
+              'DC',
+              'MAD Magazine',
+              'DC Kids',
+              'DC Universe',
+              'DC Power Visa'
+          ]},
   }
 }
 }
